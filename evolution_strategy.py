@@ -96,7 +96,7 @@ class Population:
                   for i in range(len(self.data_y))]
 
         #  Plot the data and estimated function on one plot
-        plt.figure(figsize=(16, 9))
+        plt.figure(figsize=(12, 8))
         plt.plot(self.data_x, self.data_y, color='darkblue')
         plt.plot(self.data_x, estimated_y, color='magenta')
         if b < 0:
@@ -109,7 +109,7 @@ class Population:
         plt.show()
 
         # Plot estimation errors
-        plt.figure(figsize=(16, 9))
+        plt.figure(figsize=(12, 8))
         plt.plot(self.data_x, errors, color='pink')
         plt.plot(self.data_x, [np.mean(list(map(abs, errors)))
                                for _ in self.data_x], color='lightblue')
